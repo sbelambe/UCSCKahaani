@@ -1,0 +1,62 @@
+/* src/VideoBackground.css */
+.video-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Ensures the video stays in the background */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .video-background__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(4px); 
+    box-shadow: 0 0 10px 10px black; /* Add box shadow to hide edges */
+  }
+
+  .title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 100%; /* Stretch the div to full width */
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure it has a higher z-index than the video */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  .kahaani {
+    font-size: 7em;
+    align-self: center;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  .description {
+    align-self: center;
+    font-size: 1.25em;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
